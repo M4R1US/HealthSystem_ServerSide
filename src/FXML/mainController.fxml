@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:id="MainPane" minHeight="600" minWidth="1200" stylesheets="/Stylesheets/DefaultStyle.css" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+    <top>
+        <GridPane minHeight="60">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="20" halignment="CENTER" />
+                <ColumnConstraints percentWidth="20" halignment="CENTER" />
+                <ColumnConstraints percentWidth="20" halignment="CENTER" />
+                <ColumnConstraints percentWidth="20" halignment="CENTER" />
+                <ColumnConstraints percentWidth="20" halignment="CENTER" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints percentHeight="100" />
+            </rowConstraints>
+            <HBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="20">
+                <ImageView fitWidth="32" fitHeight="32">
+                    <Image url="@/Icons/x64/router.png"/>
+                </ImageView>
+                <VBox alignment="CENTER">
+                    <Label styleClass="TopLabels" text="User Device Tunnel" textFill="#009999"/>
+                    <Label text="Listening port 5554" textFill="#009999"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0" spacing="20">
+                <ImageView fitWidth="32" fitHeight="32">
+                    <Image url="@/Icons/x64/tower-transmissions.png"/>
+                </ImageView>
+                <VBox alignment="CENTER">
+                    <Label styleClass="TopLabels" text="Virtual gsm tower" textFill="#0000FF"/>
+                    <Label text="Listening port 5555" textFill="#0000FF"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0" spacing="20">
+                <ImageView fitWidth="32" fitHeight="32">
+                    <Image url="@/Icons/x64/picture_red.png"/>
+                </ImageView>
+                <VBox alignment="CENTER">
+                    <Label styleClass="TopLabels" text="Image sender" textFill="#DC143C"/>
+                    <Label text="Listening port 5556" textFill="#DC143C"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="0" spacing="20">
+                <ImageView fitWidth="32" fitHeight="32">
+                    <Image url="@/Icons/x64/picture_green.png"/>
+                </ImageView>
+                <VBox alignment="CENTER">
+                    <Label styleClass="TopLabels" text="Image receiver" textFill="#006400"/>
+                    <Label text="Listening port 5557" textFill="#006400"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="0" spacing="20">
+                <ImageView fitWidth="32" fitHeight="32">
+                    <Image url="@/Icons/x64/firewall.png"/>
+                </ImageView>
+                <VBox alignment="CENTER">
+                    <Label styleClass="TopLabels" text="Firewall" textFill="#F2784B"/>
+                    <Label text="Listening port 5558" textFill="#F2784B"/>
+                </VBox>
+            </HBox>
+        </GridPane>
+    </top>
+    <center>
+        <ScrollPane fx:id="ScrollPane">
+            <TextFlow fx:id="TerminalTextFlow" minWidth="800" />
+        </ScrollPane>
+    </center>
+    <left>
+        <VBox minWidth="50" />
+    </left>
+    <right>
+        <VBox minWidth="50" />
+    </right>
+    <bottom>
+        <GridPane minHeight="60">
+            <rowConstraints>
+                <RowConstraints percentHeight="100"/>
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="20" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="20" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="20" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="20" halignment="CENTER"/>
+                <ColumnConstraints percentWidth="20" halignment="CENTER"/>
+            </columnConstraints>
+            <Label fx:id="ClearLabel" styleClass="BottomLabels" text="Clear terminal"  GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label fx:id="AddAdminLabel" styleClass="BottomLabels" text="Add administrator"  GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label fx:id="ActiveUsersLabel" styleClass="BottomLabels" text="Active Users" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label fx:id="SaveLogLabel" styleClass="BottomLabels" text="Save log" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <Label fx:id="RebootLabel" styleClass="BottomLabels" text="Reboot" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+        </GridPane>
+    </bottom>
+</BorderPane>

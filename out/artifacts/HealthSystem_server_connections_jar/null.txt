@@ -1,0 +1,22 @@
+From MainController: All threads seems to work properly. I am now accepting TCP connections from anyone
+
+Image sender thread running. Listening port : 5556
+
+Image receiver thread running. Listening port : 5557
+
+User device receive thread running. Listening port : 5554
+
+Sms input thread running. Listening port : 5555
+
+Firewall is running. Listening port : 5558
+
+Daktaras Vyras just logged inn from /88.89.47.103
+
+Inbound sms from : +4796861496 with context : !disable#doctor dakvyr1
+
+Daktaras Vyras just logged out /88.89.47.103
+
+Daktaras Vyras just logged out /88.89.47.103
+
+Daktaras Vyras just logged out /88.89.47.103
+

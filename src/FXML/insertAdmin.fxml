@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="InsertAdminPane" minHeight="600" minWidth="600" stylesheets="/Stylesheets/DefaultStyle.css" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.InsertAdminController">
+    <top>
+    <Label alignment="CENTER" minHeight="60" minWidth="600" text="Fill admin form. Selected phone number must be valid!" textFill="crimson" />
+    </top>
+    <center>
+        <GridPane alignment="TOP_CENTER">
+            <rowConstraints>
+                <RowConstraints percentHeight="12" valignment="CENTER" />
+                <RowConstraints percentHeight="12" valignment="CENTER" />
+                <RowConstraints percentHeight="12" valignment="CENTER" />
+                <RowConstraints percentHeight="12" valignment="CENTER" />
+                <RowConstraints percentHeight="12" valignment="CENTER" />
+                <RowConstraints percentHeight="20" valignment="CENTER" />
+                <RowConstraints percentHeight="20" valignment="CENTER" />
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="80" halignment="CENTER" />
+            </columnConstraints>
+            <VBox GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label minHeight="30" text="First Name *" />
+                <TextField fx:id="FirstNameField" />
+            </VBox>
+            <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <Label minHeight="30" text="Last Name *" />
+                <TextField fx:id="LastNameField" />
+            </VBox>
+            <HBox GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                <Label minWidth="200" text="Deliver login details with SMS" />
+                <CheckBox fx:id="SmsCheckBox" alignment="CENTER_RIGHT" />
+            </HBox>
+            <VBox fx:id="PhoneDetailsVBox" disable="true" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                <Label minHeight="30" text="Valid Phone Number *" />
+                <HBox fx:id="PhoneDetailsHBox">
+                    <ComboBox fx:id="CountryComboBox"/>
+                    <TextField fx:id="PhoneNumberField" />
+                    <CheckBox fx:id="SaveNumberCheckBox" text="Save number"/>
+                </HBox>
+            </VBox>
+            <VBox GridPane.columnIndex="0" GridPane.rowIndex="4">
+                <Label minHeight="30" text="Sex :" />
+                <ComboBox fx:id="SexComboBox" maxWidth="1.7976931348623157E308">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Male" />
+                            <String fx:value="Female" />
+                        </FXCollections>
+                    </items>
+                   <value>
+                        <String fx:value="Male" />
+                    </value>
+                </ComboBox>
+            </VBox>
+            <VBox GridPane.columnIndex="0" GridPane.rowIndex="5">
+                <Label minHeight="30" text="Additional Information" />
+                <TextArea fx:id="AdditionalInfoTextArea" />
+            </VBox>
+            <Button fx:id="InsertAdminButton" maxWidth="1.7976931348623157E308" minHeight="50" text="Insert Administrator" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        </GridPane>
+    </center>
+
+
+</BorderPane>

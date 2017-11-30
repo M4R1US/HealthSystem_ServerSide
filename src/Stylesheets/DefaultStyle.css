@@ -1,0 +1,34 @@
+
+#MainPane{
+    -fx-background-color: #bdc3c7;
+    -fx-min-height: 600;
+    -fx-max-width: 1000;
+}
+
+#ScrollPane > .viewport {
+    -fx-background-color: transparent;
+}
+#ScrollPane  {
+    -fx-background:transparent;
+    -fx-padding: 0 0 0 5;
+    -fx-background-color: rgba(52,73,94,0.8);
+}
+
+#PhoneDetailsHBox {
+    -fx-spacing: 15;
+    -fx-alignment: center-left;
+}
+.TopLabels {
+    -fx-font-size: 15;
+}
+.BottomLabels {
+    -fx-text-fill: royalblue;
+    -fx-font-size: 20;
+    -fx-cursor: hand;
+}
+
+.BottomLabels:hover {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: cadetblue;
+}
+
